@@ -4,14 +4,9 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { LinkBuilder } from "@/lib/LinkBuilder";
 import { SECTION_IDS } from "@/config/sections";
+import { HERO_PILLS } from "@/config/effects";
 
-const PILL_POSITIONS = [
-  "-top-3 -left-3 sm:-left-10",
-  "top-[52%] -right-3 sm:-right-12",
-  "-bottom-4 left-2 sm:left-6",
-];
 const SPRING = { stiffness: 80, damping: 18 };
-const PILL_DEPTH_PX = 40;
 
 export function Hero() {
   const { content, site } = useLanguage();
@@ -25,7 +20,7 @@ export function Hero() {
   const rotateY = useTransform(smoothX, [-0.5, 0.5], [-8, 8]);
   const rotateX = useTransform(smoothY, [-0.5, 0.5], [8, -8]);
 
-  // Las píldoras y la foto se inclinan levemente siguiendo el mouse
+  // La foto se inclina levemente siguiendo el mouse
   const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
     if (event.pointerType !== "mouse") return;
     const rect = event.currentTarget.getBoundingClientRect();
@@ -72,45 +67,46 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <div
-          className="relative flex flex-[1_1_320px] justify-center py-10 [perspective:1000px]"
-          onPointerMove={handlePointerMove}
-          onPointerLeave={resetPointer}
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            style={{ rotateX, rotateY }}
-            className="relative w-[min(340px,80vw)] [transform-style:preserve-3d]"
+        <div className="flex flex-[1_1_320px] flex-col items-center gap-10 py-10">
+          <div
+            className="flex justify-center [perspective:1000px]"
+            onPointerMove={handlePointerMove}
+            onPointerLeave={resetPointer}
           >
-            <div aria-hidden="true" className="blob-back absolute inset-0 translate-x-4 translate-y-3 -rotate-6 blur-[2px]" />
-            <div className="blob-shape shadow-soft relative aspect-[1/1.1] overflow-hidden bg-lilac-soft">
-              <Image
-                src={site.assets.profileImage}
-                alt={hero.profileAlt}
-                fill
-                priority
-                sizes="(max-width: 640px) 80vw, 340px"
-                className="object-cover object-top"
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              style={{ rotateX, rotateY }}
+              className="relative w-[min(340px,80vw)] [transform-style:preserve-3d]"
+            >
+              <div aria-hidden="true" className="blob-back absolute inset-0 translate-x-4 translate-y-3 -rotate-6 blur-[2px]" />
+              <div className="blob-shape shadow-soft relative aspect-[1/1.1] overflow-hidden bg-lilac-soft">
+                <Image
+                  src={site.assets.profileImage}
+                  alt={hero.profileAlt}
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 80vw, 340px"
+                  className="object-cover object-top"
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          <ul className="flex flex-wrap justify-center gap-3">
             {hero.pills.map((pill, index) => (
-              <motion.span
+              <motion.li
                 key={pill}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: [0, -8, 0] }}
-                transition={{
-                  opacity: { delay: 0.6 + index * 0.15 },
-                  y: { duration: 4 + index, repeat: Infinity, ease: "easeInOut" },
-                }}
-                style={{ z: PILL_DEPTH_PX }}
-                className={`absolute z-10 border border-white/30 bg-navy/85 backdrop-blur-md shadow-soft rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap ${PILL_POSITIONS[index] ?? ""}`}
+                initial={{ opacity: 0, y: HERO_PILLS.offsetY }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: HERO_PILLS.delay + index * HERO_PILLS.stagger }}
+                className="glass rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-hero-ink"
               >
                 {pill}
-              </motion.span>
+              </motion.li>
             ))}
-          </motion.div>
+          </ul>
         </div>
       </div>
     </section>

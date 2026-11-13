@@ -1,8 +1,10 @@
 "use client";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { SparkleBurst, useSparkles } from "@/components/ui/SparkleBurst";
 
 export function LanguageSwitcher() {
   const { language, setLanguage, content, site } = useLanguage();
+  const { bursts, trigger } = useSparkles();
 
   return (
     <div role="group" aria-label={content.language.label} className="glass flex rounded-full p-1">
@@ -15,7 +17,10 @@ export function LanguageSwitcher() {
             lang={option}
             aria-pressed={active}
             aria-label={content.language.names[option]}
-            onClick={() => setLanguage(option)}
+            onClick={(event) => {
+              trigger(event);
+              setLanguage(option);
+            }}
             className={`min-h-11 min-w-11 rounded-full px-3 text-sm font-bold transition-colors ${
               active ? "bg-lilac text-navy" : "text-hero-ink hover:bg-white/10"
             }`}
@@ -24,6 +29,7 @@ export function LanguageSwitcher() {
           </button>
         );
       })}
+      <SparkleBurst bursts={bursts} />
     </div>
   );
 }
