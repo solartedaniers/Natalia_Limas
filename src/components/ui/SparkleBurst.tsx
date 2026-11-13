@@ -58,12 +58,13 @@ export function SparkleBurst({ bursts }: { bursts: Burst[] }) {
                 height: SPARKLES.sizePx,
                 background: SPARKLES.colors[index % SPARKLES.colors.length],
               }}
-              initial={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+              initial={{ x: 0, y: 0, opacity: 1, scale: 0 }}
+              // Cada chispa crece al salir y se desvanece al final del recorrido
               animate={{
                 x: Math.cos(angle) * SPARKLES.distancePx,
                 y: Math.sin(angle) * SPARKLES.distancePx,
-                opacity: 0,
-                scale: 0,
+                opacity: [1, 1, 0],
+                scale: [0, 1, 0],
               }}
               transition={{ duration: SPARKLES.durationMs / 1000, ease: "easeOut" }}
             />

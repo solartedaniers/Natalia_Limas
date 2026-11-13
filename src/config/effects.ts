@@ -10,6 +10,6 @@ export const SPARKLES = {
   count: 10,
   distancePx: 38,
   durationMs: 650,
-  sizePx: 8,
+  sizePx: 10,
   colors: ["var(--lilac)", "var(--sky)", "var(--white)"],
 } as const;
