@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Paleta del diseño G: todo color del sitio sale de estas variables */
+:root {
+  --navy: #16233f;
+  --navy-deep: #0e1628;
+  --sky: #bfd7f2;
+  --sky-strong: #8eb8e5;
+  --lilac: #cdb9f0;
+  --white: #ffffff;
+
+  --page: #f7f5fc;
+  --ink: #1b2a4a;
+  --muted: #4a5878;
+  --line: #d9dcea;
+  --hero: var(--navy);
+  --hero-ink: var(--white);
+  --hero-muted: #dce6f5;
+  --sky-soft: #dce9f8;
+  --lilac-soft: #ede7fb;
+  --lilac-ink: #6b4fb3;
+  --sky-ink: #2f5e96;
+  --highlight: #dccff6;
+  --card: var(--white);
+  --journey-from: #f7f5fc;
+  --journey-mid: #e8eef9;
+  --journey-to: #f1ecfb;
+  --shadow: rgb(27 42 74 / 0.18);
+  --glass: rgb(255 255 255 / 0.14);
+  --glass-border: rgb(255 255 255 / 0.35);
+}
+
+/* El sitio sigue el tema del sistema operativo, sin botón de cambio */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: var(--navy-deep);
+    --ink: #e8ecf7;
+    --muted: #a9b6d3;
+    --line: #2a3a5c;
+    --hero: #121d36;
+    --sky-soft: #1a2d4d;
+    --lilac-soft: #221c3d;
+    --lilac-ink: #cdb9f0;
+    --sky-ink: #8eb8e5;
+    --highlight: rgb(205 185 240 / 0.32);
+    --card: #16233f;
+    --journey-from: var(--navy-deep);
+    --journey-mid: #13213d;
+    --journey-to: #1a1733;
+    --shadow: rgb(0 0 0 / 0.45);
+  }
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-sky: var(--sky);
+  --color-sky-strong: var(--sky-strong);
+  --color-lilac: var(--lilac);
+  --color-page: var(--page);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-hero: var(--hero);
+  --color-hero-ink: var(--hero-ink);
+  --color-hero-muted: var(--hero-muted);
+  --color-sky-soft: var(--sky-soft);
+  --color-lilac-soft: var(--lilac-soft);
+  --color-lilac-ink: var(--lilac-ink);
+  --color-sky-ink: var(--sky-ink);
+  --color-card: var(--card);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Manrope Variable", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Manrope Variable", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .bg-glow {
+    background:
+      radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--lilac) 55%, transparent) 0, transparent 42%),
+      radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--sky-strong) 50%, transparent) 0, transparent 40%),
+      radial-gradient(circle at 60% 90%, color-mix(in srgb, var(--sky) 35%, transparent) 0, transparent 45%),
+      var(--hero);
+    background-size: 140% 140%;
+    animation: breathe 18s ease-in-out infinite alternate;
+  }
+
+  .glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .marker {
+    background: linear-gradient(transparent 58%, var(--highlight) 58%);
+  }
+
+  .bg-journey {
+    background: linear-gradient(180deg, var(--journey-from) 0%, var(--journey-mid) 50%, var(--journey-to) 100%);
+  }
+
+  .blob-shape {
+    border-radius: 46% 54% 50% 50% / 44% 46% 54% 56%;
+    animation: morph 14s ease-in-out infinite;
+  }
+
+  .blob-back {
+    border-radius: 58% 42% 46% 54% / 52% 44% 56% 48%;
+    background: linear-gradient(135deg, var(--lilac), var(--sky-strong));
+    animation: morph 18s ease-in-out infinite reverse;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 30px 60px var(--shadow);
+  }
+}
+
+@keyframes breathe {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 46% 54% 50% 50% / 44% 46% 54% 56%; }
+  50% { border-radius: 54% 46% 44% 56% / 52% 56% 44% 48%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bg-glow, .blob-shape, .blob-back { animation: none; }
+}

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Julieth Limas | Ingeniera Industrial",
+    "description": "Portafolio de Julieth Natalia Limas Solarte, Ingeniera Industrial con enfoque en calidad, procesos y gestión del talento humano."
+  },
+  "nav": {
+    "label": "Navegación principal",
+    "items": [
+      { "id": "about", "label": "Sobre mí" },
+      { "id": "experience", "label": "Experiencia" },
+      { "id": "credentials", "label": "Soportes" },
+      { "id": "testimonials", "label": "Testimonios" }
+    ],
+    "cta": { "id": "contact", "label": "Contacto" },
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "language": {
+    "label": "Idioma",
+    "options": { "es": "ES", "en": "EN" },
+    "names": { "es": "Español", "en": "Inglés" }
+  },
+  "hero": {
+    "eyebrow": "Ingeniera Industrial · Talento Humano",
+    "titleStart": "Hago que los procesos",
+    "titleAccentOne": "fluyan",
+    "titleMiddle": "y que las personas",
+    "titleAccentTwo": "crezcan",
+    "titleEnd": ".",
+    "description": "Soy Julieth Natalia Limas Solarte, de Pasto, Nariño. Uno calidad, organización y gestión humana para construir operaciones más sanas.",
+    "primaryCta": "Ver mi trayectoria",
+    "secondaryCta": "Escríbeme",
+    "profileAlt": "Retrato de Julieth Limas",
+    "pills": ["Auditoría ISO 9001", "Gestión del talento", "Mejora continua"]
+  },
+  "about": {
+    "statementParts": [
+      { "text": "Soy ingeniera industrial con formación en ", "style": "plain" },
+      { "text": "gerencia del talento humano", "style": "highlight" },
+      { "text": ". Me muevo entre la ", "style": "plain" },
+      { "text": "calidad", "style": "highlight" },
+      { "text": ", los procesos y las personas, y me caracterizo por ser responsable, organizada y ", "style": "plain" },
+      { "text": "proactiva", "style": "accent" },
+      { "text": ".", "style": "plain" }
+    ],
+    "areas": [
+      { "icon": "pulse", "tone": "sky", "title": "Procesos", "text": "Producción, inventarios y mejora continua." },
+      { "icon": "shield", "tone": "lilac", "title": "Calidad y SIG", "text": "Gestión documental, auditorías y planes de mejora." },
+      { "icon": "people", "tone": "sky", "title": "Talento humano", "text": "Selección, coordinación y liderazgo de personal." }
+    ]
+  },
+  "experience": {
+    "titleStart": "Mi",
+    "titleAccent": "recorrido",
+    "items": [
+      {
+        "period": "Dic 2025 — Hoy",
+        "role": "Administradora",
+        "company": "Minimarket · emprendimiento propio",
+        "description": "Coordino el personal, la relación con proveedores, los inventarios y las ventas para que el negocio funcione cada día.",
+        "tone": "lilac"
+      },
+      {
+        "period": "Ago — Sep 2025",
+        "role": "Práctica en Gestión de Calidad",
+        "company": "Red Medicron I.P.S.",
+        "description": "Control documental, codificación de formatos, planes de mejoramiento y programa de seguridad del paciente.",
+        "tone": "sky"
+      },
+      {
+        "period": "Jun 2023 — Jul 2025",
+        "role": "Auxiliar de Producción y Calidad",
+        "company": "Panadería y Pastelería Limapan",
+        "description": "Verificación de calidad en cada etapa, control de materias primas, higiene y manipulación de alimentos.",
+        "tone": "lilac"
+      }
+    ]
+  },
+  "credentials": {
+    "titleStart": "Formación y",
+    "titleAccent": "soportes",
+    "previewTitle": "Soportes",
+    "previewHint": "Selecciona un título para ver su documento",
+    "view": "Ver documento",
+    "pending": "Soporte pendiente",
+    "items": [
+      { "id": "industrial-engineering", "title": "Ingeniera Industrial", "detail": "Universidad Cooperativa de Colombia · enero 2026" },
+      { "id": "talent-management", "title": "Esp. Gerencia del Talento Humano", "detail": "UNIMINUTO · etapa final" },
+      { "id": "iso-9001", "title": "Auditoría de Calidad ISO 9001", "detail": "SENA · 40 horas · 2026" },
+      { "id": "integrated-systems", "title": "Diplomado en SIG y Gerencia del Mantenimiento", "detail": "Universidad Cooperativa · 150 horas · 2025" },
+      { "id": "english", "title": "Inglés niveles 1 al 6 (A2)", "detail": "Soluciones Educativas S.A.S. · 2023" },
+      { "id": "seminars", "title": "Seminarios y encuentros de investigación", "detail": "Ingeniería Industrial y semilleros · 2022 — 2025" }
+    ]
+  },
+  "testimonials": {
+    "label": "Testimonios",
+    "goTo": "Ver testimonio de",
+    "items": [
+      {
+        "quote": "[Testimonio de Dania Jackeline Granda sobre su trabajo en calidad]",
+        "name": "Dania Jackeline Granda",
+        "role": "Jefatura de Gestión de Calidad",
+        "initials": "DG"
+      },
+      {
+        "quote": "[Testimonio de Juan Leonel Limas Batidas sobre su trabajo en producción]",
+        "name": "Juan Leonel Limas Batidas",
+        "role": "Jefe de Producción · Limapan",
+        "initials": "JL"
+      }
+    ]
+  },
+  "contact": {
+    "titleStart": "Construyamos algo",
+    "titleAccent": "mejor",
+    "titleEnd": "juntos",
+    "description": "Disponible para oportunidades en calidad, procesos y gestión del talento humano.",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "linkedinPending": "LinkedIn · pronto",
+    "whatsappMessage": "Hola Julieth, vi tu portafolio y me gustaría hablar contigo.",
+    "form": {
+      "title": "Envíame un mensaje",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo",
+      "emailPlaceholder": "tu@empresa.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre la vacante o el proyecto",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "¡Gracias! Tu mensaje llegó, te responderé pronto.",
+      "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por WhatsApp.",
+      "errors": {
+        "name": "Escribe tu nombre.",
+        "email": "Escribe un correo válido.",
+        "message": "Escribe un mensaje de al menos 10 caracteres."
+      },
+      "subject": "Nuevo mensaje desde tu portafolio"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Julieth Natalia Limas Solarte",
+    "location": "Pasto, Nariño · Colombia"
+  }
+}

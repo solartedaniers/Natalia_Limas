@@ -1,0 +1,32 @@
+{
+  "person": {
+    "fullName": "Julieth Natalia Limas Solarte",
+    "shortName": "Julieth Limas",
+    "initials": "JL"
+  },
+  "assets": {
+    "profileImage": "/images/profile.jpg",
+    "favicon": "/favicon.svg"
+  },
+  "contact": {
+    "email": "limasjulieth60@gmail.com",
+    "whatsappNumber": "573164298750",
+    "linkedinUrl": "",
+    "formEndpoint": "https://formsubmit.co/ajax/limasjulieth60@gmail.com"
+  },
+  "links": {
+    "whatsappBase": "https://wa.me/",
+    "mailtoPrefix": "mailto:"
+  },
+  "documents": {
+    "industrial-engineering": "",
+    "talent-management": "",
+    "iso-9001": "",
+    "integrated-systems": "",
+    "english": "",
+    "seminars": ""
+  },
+  "testimonialRotationMs": 7000,
+  "languages": ["es", "en"],
+  "defaultLanguage": "es"
+}

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Julieth Limas | Industrial Engineer",
+    "description": "Portfolio of Julieth Natalia Limas Solarte, Industrial Engineer focused on quality, processes and human talent management."
+  },
+  "nav": {
+    "label": "Main navigation",
+    "items": [
+      { "id": "about", "label": "About" },
+      { "id": "experience", "label": "Experience" },
+      { "id": "credentials", "label": "Credentials" },
+      { "id": "testimonials", "label": "Testimonials" }
+    ],
+    "cta": { "id": "contact", "label": "Contact" },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "language": {
+    "label": "Language",
+    "options": { "es": "ES", "en": "EN" },
+    "names": { "es": "Spanish", "en": "English" }
+  },
+  "hero": {
+    "eyebrow": "Industrial Engineer · Human Talent",
+    "titleStart": "I make processes",
+    "titleAccentOne": "flow",
+    "titleMiddle": "and people",
+    "titleAccentTwo": "grow",
+    "titleEnd": ".",
+    "description": "I'm Julieth Natalia Limas Solarte, from Pasto, Nariño, Colombia. I bring quality, organization and people management together to build healthier operations.",
+    "primaryCta": "See my journey",
+    "secondaryCta": "Message me",
+    "profileAlt": "Portrait of Julieth Limas",
+    "pills": ["ISO 9001 auditing", "Talent management", "Continuous improvement"]
+  },
+  "about": {
+    "statementParts": [
+      { "text": "I'm an industrial engineer trained in ", "style": "plain" },
+      { "text": "human talent management", "style": "highlight" },
+      { "text": ". I work across ", "style": "plain" },
+      { "text": "quality", "style": "highlight" },
+      { "text": ", processes and people, and I'm known for being responsible, organized and ", "style": "plain" },
+      { "text": "proactive", "style": "accent" },
+      { "text": ".", "style": "plain" }
+    ],
+    "areas": [
+      { "icon": "pulse", "tone": "sky", "title": "Processes", "text": "Production, inventory and continuous improvement." },
+      { "icon": "shield", "tone": "lilac", "title": "Quality & IMS", "text": "Document control, audits and improvement plans." },
+      { "icon": "people", "tone": "sky", "title": "Human talent", "text": "Recruitment, coordination and team leadership." }
+    ]
+  },
+  "experience": {
+    "titleStart": "My",
+    "titleAccent": "journey",
+    "items": [
+      {
+        "period": "Dec 2025 — Present",
+        "role": "Manager",
+        "company": "Minimarket · own business",
+        "description": "I coordinate staff, supplier relationships, inventory and sales so the business runs smoothly every day.",
+        "tone": "lilac"
+      },
+      {
+        "period": "Aug — Sep 2025",
+        "role": "Quality Management Internship",
+        "company": "Red Medicron I.P.S.",
+        "description": "Document control, form coding, improvement plans and patient safety program.",
+        "tone": "sky"
+      },
+      {
+        "period": "Jun 2023 — Jul 2025",
+        "role": "Production and Quality Assistant",
+        "company": "Limapan Bakery",
+        "description": "Quality checks at every stage, raw material control, hygiene and food handling.",
+        "tone": "lilac"
+      }
+    ]
+  },
+  "credentials": {
+    "titleStart": "Education &",
+    "titleAccent": "credentials",
+    "previewTitle": "Credentials",
+    "previewHint": "Select a degree to view its document",
+    "view": "View document",
+    "pending": "Document coming soon",
+    "items": [
+      { "id": "industrial-engineering", "title": "Industrial Engineer", "detail": "Universidad Cooperativa de Colombia · January 2026" },
+      { "id": "talent-management", "title": "Specialization in Human Talent Management", "detail": "UNIMINUTO · final stage" },
+      { "id": "iso-9001", "title": "ISO 9001 Quality Auditing", "detail": "SENA · 40 hours · 2026" },
+      { "id": "integrated-systems", "title": "Diploma in Integrated Management Systems & Maintenance", "detail": "Universidad Cooperativa · 150 hours · 2025" },
+      { "id": "english", "title": "English levels 1 to 6 (A2)", "detail": "Soluciones Educativas S.A.S. · 2023" },
+      { "id": "seminars", "title": "Seminars and research meetings", "detail": "Industrial Engineering and research groups · 2022 — 2025" }
+    ]
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "goTo": "Show testimonial from",
+    "items": [
+      {
+        "quote": "[Testimonial from Dania Jackeline Granda about her quality work]",
+        "name": "Dania Jackeline Granda",
+        "role": "Head of Quality Management",
+        "initials": "DG"
+      },
+      {
+        "quote": "[Testimonial from Juan Leonel Limas Batidas about her production work]",
+        "name": "Juan Leonel Limas Batidas",
+        "role": "Production Manager · Limapan",
+        "initials": "JL"
+      }
+    ]
+  },
+  "contact": {
+    "titleStart": "Let's build something",
+    "titleAccent": "better",
+    "titleEnd": "together",
+    "description": "Open to opportunities in quality, processes and human talent management.",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "linkedinPending": "LinkedIn · soon",
+    "whatsappMessage": "Hi Julieth, I saw your portfolio and would like to talk with you.",
+    "form": {
+      "title": "Send me a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about the role or project",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you! Your message arrived, I'll reply soon.",
+      "error": "It couldn't be sent. Please try again or message me on WhatsApp.",
+      "errors": {
+        "name": "Please enter your name.",
+        "email": "Please enter a valid email.",
+        "message": "Please write a message of at least 10 characters."
+      },
+      "subject": "New message from your portfolio"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Julieth Natalia Limas Solarte",
+    "location": "Pasto, Nariño · Colombia"
+  }
+}
