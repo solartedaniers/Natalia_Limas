@@ -4,3 +4,12 @@ export const HERO_PILLS = {
   stagger: 0.15,
   offsetY: 12,
 } as const;
+
+// Destello de chispas al hacer clic en los botones del encabezado
+export const SPARKLES = {
+  count: 10,
+  distancePx: 38,
+  durationMs: 650,
+  sizePx: 8,
+  colors: ["var(--lilac)", "var(--sky)", "var(--white)"],
+} as const;
