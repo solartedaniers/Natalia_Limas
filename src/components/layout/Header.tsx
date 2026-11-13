@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { LinkBuilder } from "@/lib/LinkBuilder";
@@ -25,6 +25,16 @@ export function Header() {
   }, []);
 
   const close = () => setOpen(false);
+
+  // Cerrar el menú mientras corre el scroll suave lo cancela: se navega cuando termina de cerrarse
+  const pendingSection = useRef<string | null>(null);
+  const scrollToPendingSection = () => {
+    const id = pendingSection.current;
+    if (!id) return;
+    pendingSection.current = null;
+    document.getElementById(id)?.scrollIntoView();
+    window.history.pushState(null, "", links.section(id));
+  };
 
   return (
     <header
@@ -75,7 +85,7 @@ export function Header() {
         </div>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={scrollToPendingSection}>
         {open ? (
           <motion.nav
             id="mobile-menu"
@@ -92,6 +102,8 @@ export function Header() {
                   href={links.section(item.id)}
                   onClick={(event) => {
                     trigger(event);
+                    event.preventDefault();
+                    pendingSection.current = item.id;
                     close();
                   }}
                   className="flex min-h-12 items-center rounded-2xl px-4 text-lg font-medium text-hero-ink hover:bg-white/10"
