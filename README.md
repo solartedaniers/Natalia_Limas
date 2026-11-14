@@ -31,11 +31,13 @@ src/
   components/
     layout/       encabezado y selector de idioma
     sections/     una sección por archivo: Hero, About, Experience, Credentials, Testimonials, Contact
-    ui/           piezas reutilizables: Icon, Reveal, AccentTitle
-  config/         ids de las secciones
-  content/        todo el texto y los datos: es.json, en.json y site.json
+    ui/           piezas reutilizables: Icon, Reveal, AccentTitle, SparkleBurst
+    assistant/    robot y ventana de chat del asistente
+  app/api/chat/   ruta del servidor que habla con Gemini
+  config/         ids de las secciones, efectos y límites del asistente
+  content/        todo el texto y los datos: es.json, en.json, site.json y assistant.json
   i18n/           proveedor de idioma
-  lib/            ContentRepository, LanguagePreference y LinkBuilder
+  lib/            ContentRepository, LanguagePreference, LinkBuilder y assistant/ (servicio, instrucciones y límites)
   services/       ContactService (validación y envío del formulario)
   types/          tipos del contenido
 public/
@@ -63,6 +65,23 @@ No hay texto, colores ni rutas escritos dentro de los componentes:
 - El tema claro u oscuro sigue al sistema operativo; no hay botón para cambiarlo.
 - El idioma inicial sale del navegador, y los botones ES/EN lo cambian y lo recuerdan.
 - Es responsivo en celular, tablet y escritorio, y respeta la preferencia de movimiento reducido.
+
+## Asistente con IA
+
+En la esquina inferior derecha hay un robot que abre un chat. Responde dudas sobre Julieth usando Gemini, la IA de Google.
+
+**Dónde está la clave.** En Vercel: proyecto → Settings → Environment Variables → `GEMINI_API_KEY`. En mi computador está en `.env.local`, que Git ignora; `.env.example` muestra las variables sin valores. La clave solo se usa en el servidor (`src/app/api/chat/route.ts`) y nunca llega al navegador ni al repositorio.
+
+**Cómo le agrego información.** El asistente lee solo el contenido de la página (`es.json`, `en.json` y `site.json`), así que si actualizo la experiencia, los soportes o el CV, ya lo sabe. Para datos que no están en la página, o para cambiar su tono y sus reglas, edito `src/content/assistant.json` (`extraFacts`, `persona` y `rules`). Los textos del chat (nombre, saludo, preguntas sugeridas, avisos) están en el bloque `assistant` de los dos JSON, y los límites y tiempos en `src/config/assistant.ts`.
+
+**Si algún día deja de responder.** El chat nunca muestra errores técnicos: muestra un mensaje amable con los botones de WhatsApp y correo. Para encontrar la causa:
+
+1. En Vercel → Logs busco las líneas que empiezan con `[assistant]`. Ahí sale el motivo, nunca la clave.
+2. Si dice `429`, se agotó el cupo gratuito del día: se recupera solo.
+3. Si dice `400`, `401` o `403`, la clave dejó de servir: creo una nueva en https://aistudio.google.com/apikey, la cambio en Vercel y hago Redeploy.
+4. Si dice `404`, el modelo ya no existe: en Vercel creo la variable `GEMINI_MODEL` con un modelo vigente (por ejemplo `gemini-flash-latest`) y hago Redeploy.
+
+Por defecto usa `gemini-flash-latest`, un alias que Google actualiza solo, y si está saturado prueba una vez con `gemini-flash-lite-latest`.
 
 ## Despliegue
 
