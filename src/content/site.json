@@ -19,12 +19,17 @@
     "mailtoPrefix": "mailto:"
   },
   "documents": {
-    "industrial-engineering": "",
-    "talent-management": "",
-    "iso-9001": "",
-    "integrated-systems": "",
+    "industrial-engineering": "/documents/credentials/industrial-engineering.pdf",
+    "talent-management": "/documents/credentials/talent-management.pdf",
+    "iso-9001": "/documents/credentials/iso-9001.pdf",
+    "integrated-systems": "/documents/credentials/integrated-systems.pdf",
     "english": "",
-    "seminars": ""
+    "seminars": "/documents/credentials/seminars.pdf",
+    "internship-certificate": "/documents/credentials/internship-certificate.pdf"
+  },
+  "cv": {
+    "es": { "file": "/documents/cv/CV_Julieth_Limas_ES.pdf", "preview": "/documents/cv/cv-preview-es.webp" },
+    "en": { "file": "/documents/cv/CV_Julieth_Limas_EN.pdf", "preview": "/documents/cv/cv-preview-en.webp" }
   },
   "testimonialRotationMs": 7000,
   "languages": ["es", "en"],

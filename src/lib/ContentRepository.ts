@@ -1,7 +1,7 @@
 import es from "@/content/es.json";
 import en from "@/content/en.json";
 import site from "@/content/site.json";
-import type { Language, PageContent, SiteConfig } from "@/types/content";
+import type { CvDocument, Language, PageContent, SiteConfig } from "@/types/content";
 
 // Único punto de acceso al contenido: los componentes nunca importan los JSON directamente
 export class ContentRepository {
@@ -27,5 +27,10 @@ export class ContentRepository {
   static documentFor(credentialId: string): string | null {
     const file = this.config.documents[credentialId];
     return file ? file : null;
+  }
+
+  static cvFor(language: Language): CvDocument | null {
+    const cv = this.config.cv[language];
+    return cv?.file ? cv : null;
   }
 }
