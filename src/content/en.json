@@ -84,6 +84,7 @@
     "previewHint": "Select a degree to view its document",
     "view": "View document",
     "pending": "Document coming soon",
+    "opensInNewTab": "opens the document in a new tab",
     "items": [
       { "id": "industrial-engineering", "title": "Industrial Engineer", "detail": "Universidad Cooperativa de Colombia · January 2026" },
       { "id": "talent-management", "title": "Specialization in Human Talent Management", "detail": "UNIMINUTO · final stage" },

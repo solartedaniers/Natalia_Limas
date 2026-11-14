@@ -84,6 +84,7 @@ export interface PageContent {
     previewHint: string;
     view: string;
     pending: string;
+    opensInNewTab: string;
     items: CredentialItem[];
   };
   cv: {
