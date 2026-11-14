@@ -31,6 +31,9 @@
   /* Asistente virtual: brillo del remolino del robot y punto de "en línea" */
   --assistant-glow: #6f7bff;
   --online: #5fd39a;
+  /* Puntos del globito del asistente: lila y azul marino; en oscuro el marino pasa a celeste para contrastar */
+  --assistant-dot-lilac: var(--lilac-ink);
+  --assistant-dot-navy: var(--navy);
 }
 
 /* El sitio sigue el tema del sistema operativo, sin botón de cambio */
@@ -51,6 +54,7 @@
     --journey-mid: #13213d;
     --journey-to: #1a1733;
     --shadow: rgb(0 0 0 / 0.45);
+    --assistant-dot-navy: var(--sky);
   }
 }
 
