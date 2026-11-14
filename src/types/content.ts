@@ -121,6 +121,7 @@ export interface SiteConfig {
   contact: { email: string; whatsappNumber: string; linkedinUrl: string; formEndpoint: string };
   links: { whatsappBase: string; mailtoPrefix: string };
   documents: Record<string, string>;
+  credentialImages: Record<string, string>;
   cv: Record<Language, CvDocument>;
   testimonialRotationMs: number;
   languages: Language[];

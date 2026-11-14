@@ -23,9 +23,18 @@
     "talent-management": "/documents/credentials/talent-management.pdf",
     "iso-9001": "/documents/credentials/iso-9001.pdf",
     "integrated-systems": "/documents/credentials/integrated-systems.pdf",
-    "english": "",
+    "english": "/documents/credentials/english.pdf",
     "seminars": "/documents/credentials/seminars.pdf",
     "internship-certificate": "/documents/credentials/internship-certificate.pdf"
+  },
+  "credentialImages": {
+    "industrial-engineering": "/images/credentials/industrial-engineering.webp",
+    "talent-management": "/images/credentials/talent-management.webp",
+    "iso-9001": "/images/credentials/iso-9001.webp",
+    "integrated-systems": "/images/credentials/integrated-systems.webp",
+    "english": "/images/credentials/english.webp",
+    "seminars": "/images/credentials/seminars.webp",
+    "internship-certificate": "/images/credentials/internship-certificate.webp"
   },
   "cv": {
     "es": { "file": "/documents/cv/CV_Julieth_Limas_ES.pdf", "preview": "/documents/cv/cv-preview-es.webp" },
