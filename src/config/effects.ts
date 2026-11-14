@@ -20,3 +20,12 @@ export const SPARKLES = {
   sizePx: 10,
   colors: ["var(--lilac)", "var(--sky)", "var(--white)"],
 } as const;
+
+// Relieve del nombre del encabezado al pasar el mouse o tocarlo
+export const LOGO_RELIEF = {
+  liftPx: 2.5,
+  scale: 1.04,
+  glowBlurPx: 14,
+  glowStrengthPct: 75,
+  durationMs: 250,
+} as const;

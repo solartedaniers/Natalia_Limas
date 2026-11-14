@@ -1,14 +1,23 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { LinkBuilder } from "@/lib/LinkBuilder";
 import { Icon } from "@/components/ui/Icon";
 import { SparkleBurst, useSparkles } from "@/components/ui/SparkleBurst";
 import { SECTION_IDS } from "@/config/sections";
+import { LOGO_RELIEF } from "@/config/effects";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const SCROLL_THRESHOLD = 24;
+
+const LOGO_STYLE = {
+  "--logo-lift": `${LOGO_RELIEF.liftPx}px`,
+  "--logo-scale": LOGO_RELIEF.scale,
+  "--logo-glow-blur": `${LOGO_RELIEF.glowBlurPx}px`,
+  "--logo-glow-strength": `${LOGO_RELIEF.glowStrengthPct}%`,
+  "--logo-duration": `${LOGO_RELIEF.durationMs}ms`,
+} as CSSProperties;
 
 export function Header() {
   const { content, site } = useLanguage();
@@ -43,7 +52,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
-        <a href={links.section(SECTION_IDS.hero)} className="font-display text-2xl italic text-hero-ink">
+        <a href={links.section(SECTION_IDS.hero)} style={LOGO_STYLE} className="logo-relief font-display text-2xl italic text-hero-ink">
           {site.person.shortName}
         </a>
 
