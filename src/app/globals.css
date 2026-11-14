@@ -133,6 +133,28 @@ body {
     box-shadow: 0 30px 60px var(--shadow);
   }
 
+  /* Relieve del nombre: los valores llegan como variables desde src/config/effects.ts */
+  .logo-relief {
+    display: inline-block;
+    transition:
+      transform var(--logo-duration) ease-out,
+      text-shadow var(--logo-duration) ease-out;
+  }
+
+  .logo-relief:active,
+  .logo-relief:focus-visible {
+    transform: translateY(calc(var(--logo-lift) * -1)) scale(var(--logo-scale));
+    text-shadow: 0 0 var(--logo-glow-blur) color-mix(in srgb, var(--lilac) var(--logo-glow-strength), transparent);
+  }
+
+  /* Solo con mouse: en pantallas táctiles el hover se queda pegado después del toque */
+  @media (hover: hover) {
+    .logo-relief:hover {
+      transform: translateY(calc(var(--logo-lift) * -1)) scale(var(--logo-scale));
+      text-shadow: 0 0 var(--logo-glow-blur) color-mix(in srgb, var(--lilac) var(--logo-glow-strength), transparent);
+    }
+  }
+
   .assistant-glow {
     background: radial-gradient(closest-side, var(--assistant-glow), transparent);
     filter: blur(6px);
@@ -157,4 +179,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .bg-glow, .blob-shape, .blob-back { animation: none; }
+  /* Sin elevación ni crecimiento: solo queda el brillo */
+  .logo-relief:hover, .logo-relief:active, .logo-relief:focus-visible { transform: none; }
 }
