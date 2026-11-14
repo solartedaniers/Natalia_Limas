@@ -8,6 +8,7 @@ import { Credentials } from "@/components/sections/Credentials";
 import { Cv } from "@/components/sections/Cv";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
+import { AssistantWidget } from "@/components/assistant/AssistantWidget";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Testimonials />
         <Contact />
       </main>
+      <AssistantWidget />
     </MotionConfig>
   );
 }

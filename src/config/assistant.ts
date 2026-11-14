@@ -29,12 +29,16 @@ export const ASSISTANT_TIMING = {
   poseFadeMs: 250,
   thumbsUpMs: 2000,
   excitedMs: 2000,
+  welcomeMs: 2200,
   nudgeFirstDelayMs: 12_000,
   nudgeIntervalMs: 45_000,
   nudgeVisibleMs: 6000,
   floatDurationS: 3.2,
   swayDurationS: 4.6,
   glowDurationS: 2.4,
+  panelTransitionS: 0.25,
+  typingDotS: 0.9,
+  typingStaggerS: 0.15,
 } as const;
 
 // Amplitud de los movimientos continuos del robot

@@ -37,6 +37,7 @@ const PATHS: Record<IconName, React.ReactNode> = {
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,
   close: <path d="M6 6l12 12M18 6 6 18" />,
+  send: <path d="M5 12h13M12 5l7 7-7 7" />,
 };
 
 interface IconProps {

@@ -2,7 +2,7 @@ export type Language = "es" | "en";
 
 export type Tone = "sky" | "lilac";
 
-export type IconName = "pulse" | "shield" | "people" | "whatsapp" | "linkedin" | "mail" | "document" | "arrow" | "menu" | "close";
+export type IconName = "pulse" | "shield" | "people" | "whatsapp" | "linkedin" | "mail" | "document" | "arrow" | "menu" | "close" | "send";
 
 export interface NavItem {
   id: string;
