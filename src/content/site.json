@@ -19,12 +19,12 @@
     "mailtoPrefix": "mailto:"
   },
   "documents": {
-    "industrial-engineering": "",
-    "talent-management": "",
-    "iso-9001": "",
-    "integrated-systems": "",
+    "industrial-engineering": "/documents/credentials/industrial-engineering.pdf",
+    "talent-management": "/documents/credentials/talent-management.pdf",
+    "iso-9001": "/documents/credentials/iso-9001.pdf",
+    "integrated-systems": "/documents/credentials/integrated-systems.pdf",
     "english": "",
-    "seminars": ""
+    "seminars": "/documents/credentials/seminars.pdf"
   },
   "testimonialRotationMs": 7000,
   "languages": ["es", "en"],
