@@ -9,6 +9,7 @@
       { "id": "about", "label": "About" },
       { "id": "experience", "label": "Experience" },
       { "id": "credentials", "label": "Credentials" },
+      { "id": "cv", "label": "CV" },
       { "id": "testimonials", "label": "Testimonials" }
     ],
     "cta": { "id": "contact", "label": "Contact" },
@@ -92,6 +93,15 @@
       { "id": "seminars", "title": "Seminars and research meetings", "detail": "Industrial Engineering and research groups · 2022 — 2025" },
       { "id": "internship-certificate", "title": "Quality Management Internship · Red Medicron I.P.S.", "detail": "Internship certificate · Aug — Sep 2025" }
     ]
+  },
+  "cv": {
+    "titleStart": "My",
+    "titleAccent": "résumé",
+    "description": "Download my CV or open it online to see my education, experience and skills at a glance.",
+    "download": "Download CV",
+    "viewOnline": "View online",
+    "previewAlt": "Preview of Julieth Limas's résumé",
+    "pending": "CV coming soon"
   },
   "testimonials": {
     "label": "Testimonials",

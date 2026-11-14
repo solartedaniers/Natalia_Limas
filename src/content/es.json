@@ -9,6 +9,7 @@
       { "id": "about", "label": "Sobre mí" },
       { "id": "experience", "label": "Experiencia" },
       { "id": "credentials", "label": "Soportes" },
+      { "id": "cv", "label": "CV" },
       { "id": "testimonials", "label": "Testimonios" }
     ],
     "cta": { "id": "contact", "label": "Contacto" },
@@ -92,6 +93,15 @@
       { "id": "seminars", "title": "Seminarios y encuentros de investigación", "detail": "Ingeniería Industrial y semilleros · 2022 — 2025" },
       { "id": "internship-certificate", "title": "Práctica en Gestión de Calidad · Red Medicron I.P.S.", "detail": "Certificado de práctica · Ago — Sep 2025" }
     ]
+  },
+  "cv": {
+    "titleStart": "Mi hoja de",
+    "titleAccent": "vida",
+    "description": "Descarga mi CV o ábrelo en línea para ver de un vistazo mi formación, experiencia y competencias.",
+    "download": "Descargar CV",
+    "viewOnline": "Ver en línea",
+    "previewAlt": "Vista previa de la hoja de vida de Julieth Limas",
+    "pending": "CV pendiente"
   },
   "testimonials": {
     "label": "Testimonios",

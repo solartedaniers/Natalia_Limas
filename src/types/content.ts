@@ -86,6 +86,15 @@ export interface PageContent {
     pending: string;
     items: CredentialItem[];
   };
+  cv: {
+    titleStart: string;
+    titleAccent: string;
+    description: string;
+    download: string;
+    viewOnline: string;
+    previewAlt: string;
+    pending: string;
+  };
   testimonials: { label: string; goTo: string; items: Testimonial[] };
   contact: {
     titleStart: string;
@@ -101,12 +110,18 @@ export interface PageContent {
   footer: { copyright: string; location: string };
 }
 
+export interface CvDocument {
+  file: string;
+  preview: string;
+}
+
 export interface SiteConfig {
   person: { fullName: string; shortName: string; initials: string };
   assets: { profileImage: string; favicon: string };
   contact: { email: string; whatsappNumber: string; linkedinUrl: string; formEndpoint: string };
   links: { whatsappBase: string; mailtoPrefix: string };
   documents: Record<string, string>;
+  cv: Record<Language, CvDocument>;
   testimonialRotationMs: number;
   languages: Language[];
   defaultLanguage: Language;

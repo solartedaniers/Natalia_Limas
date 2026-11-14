@@ -4,6 +4,7 @@ export const SECTION_IDS = {
   about: "about",
   experience: "experience",
   credentials: "credentials",
+  cv: "cv",
   testimonials: "testimonials",
   contact: "contact",
 } as const;

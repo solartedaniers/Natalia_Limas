@@ -27,6 +27,10 @@
     "seminars": "/documents/credentials/seminars.pdf",
     "internship-certificate": "/documents/credentials/internship-certificate.pdf"
   },
+  "cv": {
+    "es": { "file": "/documents/cv/CV_Julieth_Limas_ES.pdf", "preview": "/documents/cv/cv-preview-es.webp" },
+    "en": { "file": "/documents/cv/CV_Julieth_Limas_EN.pdf", "preview": "/documents/cv/cv-preview-en.webp" }
+  },
   "testimonialRotationMs": 7000,
   "languages": ["es", "en"],
   "defaultLanguage": "es"

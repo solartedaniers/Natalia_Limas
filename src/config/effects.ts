@@ -5,6 +5,13 @@ export const HERO_PILLS = {
   offsetY: 12,
 } as const;
 
+// Inclinación 3D de la vista previa del CV (grados); se endereza al pasar el mouse
+export const CV_PREVIEW = {
+  rotateX: 4,
+  rotateY: -10,
+  hoverScale: 1.02,
+} as const;
+
 // Destello de chispas al hacer clic en los botones del encabezado
 export const SPARKLES = {
   count: 10,
