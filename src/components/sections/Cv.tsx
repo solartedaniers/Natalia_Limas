@@ -26,7 +26,7 @@ export function Cv() {
               <a
                 href={cvFile.file}
                 download
-                className="inline-flex min-h-13 items-center gap-2 rounded-full bg-navy px-7 font-bold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex min-h-13 items-center gap-2 rounded-full bg-ink px-7 font-bold text-page transition-transform hover:-translate-y-0.5"
               >
                 <Icon name="document" />
                 {cv.download}
