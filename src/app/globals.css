@@ -28,6 +28,9 @@
   --shadow: rgb(27 42 74 / 0.18);
   --glass: rgb(255 255 255 / 0.14);
   --glass-border: rgb(255 255 255 / 0.35);
+  /* Asistente virtual: brillo del remolino del robot y punto de "en línea" */
+  --assistant-glow: #6f7bff;
+  --online: #5fd39a;
 }
 
 /* El sitio sigue el tema del sistema operativo, sin botón de cambio */
@@ -68,6 +71,7 @@
   --color-lilac-ink: var(--lilac-ink);
   --color-sky-ink: var(--sky-ink);
   --color-card: var(--card);
+  --color-online: var(--online);
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Manrope Variable", system-ui, sans-serif;
 }
@@ -123,6 +127,11 @@ body {
 
   .shadow-soft {
     box-shadow: 0 30px 60px var(--shadow);
+  }
+
+  .assistant-glow {
+    background: radial-gradient(closest-side, var(--assistant-glow), transparent);
+    filter: blur(6px);
   }
 
   /* Estrella de cuatro puntas para los destellos */
