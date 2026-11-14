@@ -58,6 +58,40 @@ export interface ContactFormCopy {
   subject: string;
 }
 
+export interface AssistantCopy {
+  name: string;
+  role: string;
+  status: string;
+  openLabel: string;
+  closeLabel: string;
+  dialogLabel: string;
+  greeting: string;
+  suggestionsLabel: string;
+  suggestions: string[];
+  placeholder: string;
+  send: string;
+  typing: string;
+  you: string;
+  disclaimer: string;
+  fallback: string;
+  rateLimited: string;
+  tooLong: string;
+  contactWhatsapp: string;
+  contactEmail: string;
+  nudge: string;
+  dismissNudge: string;
+  excitedWords: string[];
+}
+
+export type RobotPose = "idle" | "wave" | "welcome" | "thinking" | "thumbsUp" | "excited";
+
+export interface AssistantConfig {
+  images: Record<RobotPose, string>;
+  persona: string;
+  rules: string[];
+  extraFacts: string[];
+}
+
 export interface PageContent {
   meta: { title: string; description: string };
   nav: { label: string; items: NavItem[]; cta: NavItem; openMenu: string; closeMenu: string };
@@ -108,6 +142,7 @@ export interface PageContent {
     whatsappMessage: string;
     form: ContactFormCopy;
   };
+  assistant: AssistantCopy;
   footer: { copyright: string; location: string };
 }
 

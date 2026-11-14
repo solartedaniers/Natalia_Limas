@@ -151,6 +151,35 @@
       "subject": "New message from your portfolio"
     }
   },
+  "assistant": {
+    "name": "Julibot",
+    "role": "Julieth's virtual assistant",
+    "status": "Online",
+    "openLabel": "Open chat with the virtual assistant",
+    "closeLabel": "Close chat",
+    "dialogLabel": "Chat with Julieth's virtual assistant",
+    "greeting": "Hi! I'm Julibot, Julieth's assistant. Ask me about her experience, her education or how to reach her.",
+    "suggestionsLabel": "Suggested questions",
+    "suggestions": [
+      "What experience does Julieth have?",
+      "What did she study and which certificates does she hold?",
+      "Which areas can she contribute to?",
+      "How can I contact her?"
+    ],
+    "placeholder": "Type your question…",
+    "send": "Send question",
+    "typing": "Julibot is typing…",
+    "you": "You",
+    "disclaimer": "AI assistant. It can make mistakes; confirm important details with Julieth.",
+    "fallback": "I can't answer right now, but Julieth will be happy to help you directly.",
+    "rateLimited": "You've asked a lot of questions in a row. Please wait a few minutes or contact Julieth directly.",
+    "tooLong": "Your question is a bit long. Could you shorten it?",
+    "contactWhatsapp": "WhatsApp",
+    "contactEmail": "Email",
+    "nudge": "Want to know something about Julieth?",
+    "dismissNudge": "Dismiss message",
+    "excitedWords": ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "greetings", "thanks", "thank you", "great", "awesome"]
+  },
   "footer": {
     "copyright": "© 2026 Julieth Natalia Limas Solarte",
     "location": "Pasto, Nariño · Colombia"
