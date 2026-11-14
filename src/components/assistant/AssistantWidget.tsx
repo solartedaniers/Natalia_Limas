@@ -7,6 +7,7 @@ import { Icon } from "@/components/ui/Icon";
 import { ASSISTANT_TIMING } from "@/config/assistant";
 import type { RobotPose } from "@/types/content";
 import { AssistantRobot } from "./AssistantRobot";
+import { ChatHint } from "./ChatHint";
 import { ChatPanel } from "./ChatPanel";
 import { useAssistantChat } from "./useAssistantChat";
 
@@ -139,9 +140,11 @@ export function AssistantWidget() {
           aria-label={open ? copy.closeLabel : copy.openLabel}
           aria-expanded={open}
           aria-haspopup="dialog"
-          className="pointer-events-auto size-[72px] rounded-full drop-shadow-[0_10px_18px_var(--shadow)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lilac-ink sm:size-24"
+          className="pointer-events-auto relative size-[72px] rounded-full drop-shadow-[0_10px_18px_var(--shadow)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lilac-ink sm:size-24"
         >
           <AssistantRobot pose={pose} animated className="size-full" />
+          {/* El globito se oculta con el chat abierto o mientras está la burbuja de texto */}
+          <AnimatePresence>{!open && !nudge ? <ChatHint key="hint" /> : null}</AnimatePresence>
         </button>
       </div>
     </>

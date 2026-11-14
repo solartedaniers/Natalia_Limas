@@ -64,3 +64,19 @@ export const ASSISTANT_API = {
   // Marca que el servidor agrega si Gemini falla a mitad de la respuesta
   streamErrorMarker: "\u0000assistant-error\u0000",
 } as const;
+
+// Globito con puntos junto al robot: indica que ahí se puede chatear.
+// Tamaños en % del robot para que escale igual en escritorio (96 px) y celular (72 px)
+export const ASSISTANT_HINT = {
+  widthPct: 46,
+  heightPct: 28,
+  leftPct: -22,
+  topPct: -4,
+  dotSizePct: 15,
+  dotLiftPct: 30,
+  enterDelayS: 0.8,
+  enterDurationS: 0.35,
+  exitDurationS: 0.15,
+  dotDurationS: 1.2,
+  dotStaggerS: 0.18,
+} as const;
