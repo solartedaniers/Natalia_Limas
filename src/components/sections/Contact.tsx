@@ -54,7 +54,8 @@ export function Contact() {
         </Reveal>
       </div>
       <footer className="border-t border-white/15">
-        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 px-5 py-8 text-sm text-sky sm:px-8">
+        {/* Margen derecho libre para el robot del asistente; en pantallas anchas el robot ya queda fuera del contenido */}
+        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 py-8 pr-24 pl-5 text-sm text-sky sm:pr-36 sm:pl-8 min-[1392px]:pr-8">
           <span>{content.footer.copyright}</span>
           <span>{content.footer.location}</span>
         </div>

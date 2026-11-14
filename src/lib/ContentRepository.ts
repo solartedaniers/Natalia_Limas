@@ -1,7 +1,8 @@
 import es from "@/content/es.json";
 import en from "@/content/en.json";
 import site from "@/content/site.json";
-import type { CvDocument, Language, PageContent, SiteConfig } from "@/types/content";
+import assistant from "@/content/assistant.json";
+import type { AssistantConfig, CvDocument, Language, PageContent, SiteConfig } from "@/types/content";
 
 // Único punto de acceso al contenido: los componentes nunca importan los JSON directamente
 export class ContentRepository {
@@ -18,6 +19,10 @@ export class ContentRepository {
 
   static site(): SiteConfig {
     return this.config;
+  }
+
+  static assistant(): AssistantConfig {
+    return assistant as AssistantConfig;
   }
 
   static isSupported(value: unknown): value is Language {

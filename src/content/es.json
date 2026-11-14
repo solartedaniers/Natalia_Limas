@@ -151,6 +151,35 @@
       "subject": "Nuevo mensaje desde tu portafolio"
     }
   },
+  "assistant": {
+    "name": "Julibot",
+    "role": "Asistente virtual de Julieth",
+    "status": "En línea",
+    "openLabel": "Abrir el chat con el asistente virtual",
+    "closeLabel": "Cerrar el chat",
+    "dialogLabel": "Chat con el asistente virtual de Julieth",
+    "greeting": "¡Hola! Soy Julibot, el asistente de Julieth. Pregúntame por su experiencia, su formación o cómo contactarla.",
+    "suggestionsLabel": "Preguntas sugeridas",
+    "suggestions": [
+      "¿Qué experiencia tiene Julieth?",
+      "¿Qué estudió y qué certificados tiene?",
+      "¿En qué áreas puede aportar?",
+      "¿Cómo puedo contactarla?"
+    ],
+    "placeholder": "Escribe tu pregunta…",
+    "send": "Enviar pregunta",
+    "typing": "Julibot está escribiendo…",
+    "you": "Tú",
+    "disclaimer": "Asistente con IA. Puede equivocarse; confirma los datos importantes con Julieth.",
+    "fallback": "En este momento no puedo responder, pero Julieth estará feliz de atenderte directamente.",
+    "rateLimited": "Has hecho muchas preguntas seguidas. Espera unos minutos o escríbele a Julieth directamente.",
+    "tooLong": "Tu pregunta es un poco larga. ¿Puedes resumirla?",
+    "contactWhatsapp": "WhatsApp",
+    "contactEmail": "Correo",
+    "nudge": "¿Quieres saber algo de Julieth?",
+    "dismissNudge": "Cerrar mensaje",
+    "excitedWords": ["hola", "buenas", "buenos días", "buenas tardes", "buenas noches", "saludos", "gracias", "mil gracias", "genial", "excelente"]
+  },
   "footer": {
     "copyright": "© 2026 Julieth Natalia Limas Solarte",
     "location": "Pasto, Nariño · Colombia"
