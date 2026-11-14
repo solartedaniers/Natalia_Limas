@@ -29,6 +29,11 @@ export class ContentRepository {
     return file ? file : null;
   }
 
+  static imageFor(credentialId: string): string | null {
+    const image = this.config.credentialImages[credentialId];
+    return image ? image : null;
+  }
+
   static cvFor(language: Language): CvDocument | null {
     const cv = this.config.cv[language];
     return cv?.file ? cv : null;
