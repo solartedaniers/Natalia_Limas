@@ -84,6 +84,7 @@
     "previewHint": "Selecciona un título para ver su documento",
     "view": "Ver documento",
     "pending": "Soporte pendiente",
+    "opensInNewTab": "abre el documento en una pestaña nueva",
     "items": [
       { "id": "industrial-engineering", "title": "Ingeniera Industrial", "detail": "Universidad Cooperativa de Colombia · enero 2026" },
       { "id": "talent-management", "title": "Esp. Gerencia del Talento Humano", "detail": "UNIMINUTO · etapa final" },

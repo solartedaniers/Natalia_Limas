@@ -89,24 +89,42 @@ export function Credentials() {
         <ul className="flex flex-col">
           {credentials.items.map((item, index) => {
             const active = index === selectedIndex;
+            const file = ContentRepository.documentFor(item.id);
+            const select = () => setSelectedIndex(index);
+            const rowClassName = "group flex w-full items-center justify-between gap-4 py-5 text-left";
+            const row = (
+              <>
+                <span>
+                  <strong className={`block text-lg transition-colors ${active ? "text-lilac-ink" : ""}`}>{item.title}</strong>
+                  <span className="text-muted">{item.detail}</span>
+                </span>
+                <Icon
+                  name="arrow"
+                  className={`shrink-0 text-lilac-ink transition-transform ${active ? "translate-x-1" : "opacity-50 group-hover:translate-x-1 group-hover:opacity-100"}`}
+                />
+              </>
+            );
             return (
               <li key={item.id} className="border-b border-line last:border-b-0">
-                <button
-                  type="button"
-                  aria-pressed={active}
-                  onClick={() => setSelectedIndex(index)}
-                  onMouseEnter={() => setSelectedIndex(index)}
-                  className="group flex w-full items-center justify-between gap-4 py-5 text-left"
-                >
-                  <span>
-                    <strong className={`block text-lg transition-colors ${active ? "text-lilac-ink" : ""}`}>{item.title}</strong>
-                    <span className="text-muted">{item.detail}</span>
-                  </span>
-                  <Icon
-                    name="arrow"
-                    className={`shrink-0 text-lilac-ink transition-transform ${active ? "translate-x-1" : "opacity-50 group-hover:translate-x-1 group-hover:opacity-100"}`}
-                  />
-                </button>
+                {/* Con documento, el clic selecciona y además lo abre; sin documento solo selecciona */}
+                {file ? (
+                  <a
+                    href={file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${item.title} · ${credentials.opensInNewTab}`}
+                    aria-current={active || undefined}
+                    onClick={select}
+                    onMouseEnter={select}
+                    className={rowClassName}
+                  >
+                    {row}
+                  </a>
+                ) : (
+                  <button type="button" aria-pressed={active} onClick={select} onMouseEnter={select} className={rowClassName}>
+                    {row}
+                  </button>
+                )}
               </li>
             );
           })}
