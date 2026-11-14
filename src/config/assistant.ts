@@ -1,6 +1,10 @@
 // Modelo de Gemini: el alias "-latest" lo actualiza Google solo; GEMINI_MODEL permite cambiarlo sin tocar código
 export const ASSISTANT_MODEL = {
   defaultModel: "gemini-flash-latest",
+  // Respaldo, también un alias que Google actualiza solo: se usa una vez si el principal está saturado o tarda
+  backupModel: "gemini-flash-lite-latest",
+  // Errores pasajeros (saturación, cupo, caída) que justifican probar el modelo de respaldo
+  transientStatuses: [429, 500, 503, 504],
   // Los alias "-latest" solo se publican en v1beta
   apiVersion: "v1beta",
 } as const;
@@ -8,7 +12,10 @@ export const ASSISTANT_MODEL = {
 // Límites para proteger el cupo gratuito de la API
 export const ASSISTANT_LIMITS = {
   maxQuestionLength: 500,
-  maxOutputTokens: 1024,
+  // Incluye los tokens que el modelo usa para "pensar" antes de responder
+  maxOutputTokens: 1536,
+  // Tiempo máximo para que cada modelo empiece a responder antes de rendirse
+  firstChunkTimeoutMs: 10_000,
   historyMessages: 8,
   maxRequestBodyBytes: 16_000,
   rateLimit: {
