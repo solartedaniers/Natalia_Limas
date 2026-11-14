@@ -89,7 +89,8 @@
       { "id": "iso-9001", "title": "Auditoría de Calidad ISO 9001", "detail": "SENA · 40 horas · 2026" },
       { "id": "integrated-systems", "title": "Diplomado en SIG y Gerencia del Mantenimiento", "detail": "Universidad Cooperativa · 150 horas · 2025" },
       { "id": "english", "title": "Inglés niveles 1 al 6 (A2)", "detail": "Soluciones Educativas S.A.S. · 2023" },
-      { "id": "seminars", "title": "Seminarios y encuentros de investigación", "detail": "Ingeniería Industrial y semilleros · 2022 — 2025" }
+      { "id": "seminars", "title": "Seminarios y encuentros de investigación", "detail": "Ingeniería Industrial y semilleros · 2022 — 2025" },
+      { "id": "internship-certificate", "title": "Práctica en Gestión de Calidad · Red Medicron I.P.S.", "detail": "Certificado de práctica · Ago — Sep 2025" }
     ]
   },
   "testimonials": {

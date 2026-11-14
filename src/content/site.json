@@ -24,7 +24,8 @@
     "iso-9001": "/documents/credentials/iso-9001.pdf",
     "integrated-systems": "/documents/credentials/integrated-systems.pdf",
     "english": "",
-    "seminars": "/documents/credentials/seminars.pdf"
+    "seminars": "/documents/credentials/seminars.pdf",
+    "internship-certificate": "/documents/credentials/internship-certificate.pdf"
   },
   "testimonialRotationMs": 7000,
   "languages": ["es", "en"],

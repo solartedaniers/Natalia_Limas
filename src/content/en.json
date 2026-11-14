@@ -89,7 +89,8 @@
       { "id": "iso-9001", "title": "ISO 9001 Quality Auditing", "detail": "SENA · 40 hours · 2026" },
       { "id": "integrated-systems", "title": "Diploma in Integrated Management Systems & Maintenance", "detail": "Universidad Cooperativa · 150 hours · 2025" },
       { "id": "english", "title": "English levels 1 to 6 (A2)", "detail": "Soluciones Educativas S.A.S. · 2023" },
-      { "id": "seminars", "title": "Seminars and research meetings", "detail": "Industrial Engineering and research groups · 2022 — 2025" }
+      { "id": "seminars", "title": "Seminars and research meetings", "detail": "Industrial Engineering and research groups · 2022 — 2025" },
+      { "id": "internship-certificate", "title": "Quality Management Internship · Red Medicron I.P.S.", "detail": "Internship certificate · Aug — Sep 2025" }
     ]
   },
   "testimonials": {
